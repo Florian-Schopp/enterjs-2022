@@ -1,0 +1,2 @@
+clang-12 --target=wasm32-wasi --sysroot=$WASI_SDK_PATH/share/wasi-sysroot/ -g example3.c -o dist/example3/example3.wasm
+lldb -- wasmtime -g  /home/florian/ws/hbk/other/enterjs/dist/example3/example3.wasm

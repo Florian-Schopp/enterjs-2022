@@ -1,0 +1,28 @@
+{
+    "tasks": [
+        {
+            "label": "compileWasm",
+            "type": "cppbuild",
+            "command": "/usr/bin/clang-12",
+            "args": [
+                "-fdiagnostics-color=always",
+                "--target=wasm32-wasi",
+                "--sysroot=$WASI_SDK_PATH/share/wasi-sysroot/",
+                "-Xclang",
+                "-disable-O0-optnone",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/dist/${fileBasenameNoExtension}.wasm"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

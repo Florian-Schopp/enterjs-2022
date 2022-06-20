@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "memory.h": "c",
+    "lsan_interface.h": "c"
+  },
+  "C_Cpp.errorSquiggles": "Disabled"
+}
